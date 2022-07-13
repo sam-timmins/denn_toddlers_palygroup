@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+
+{% block content %}
+<!-- Playgroup name section -->
+    <section class="container-fluid">
+
+        <div class="row">
+            <div class="col col-md-6 text-center">
+                {% include  'home/components/svg-blob.html' %}
+            </div>
+            <div class="col-md-6 d-none d-md-block p-0">
+                <div class="home-top-image"></div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-12 hero-image background-orange p-0">
+                <div
+                    class="w-100 h-100 p-0 m-0 background-black-transp d-flex flex-column justify-content-center align-items-center">
+                    <h1 class="text-lg mx-auto mb-0 text-white p-5 text-center">Welcome to {{ playgroup_name }}</h1>
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-12 col-md-8 col-lg-6 mx-auto mb-5 text-center">
+                                <p class="text-white p-3 m-0 text-sm">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident ullam quia, quidem
+                                    similique consequuntur eum odio nihil. Quisquam, sequi corporis. Quidem hic molestias
+                                    tenetur quibusdam incidunt minus accusantium amet, asperiores reprehenderit numquam.
+                                    Porro fugit dicta quas doloremque saepe perferendis dolorem veniam, exercitationem
+                                    quasi, vitae quaerat harum qui assumenda. Laudantium, itaque?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

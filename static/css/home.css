@@ -1,0 +1,17 @@
+.home-top-image {
+    background-image: url("/static/images/hands.jpg");
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--orange);
+}
+
+.hero-image {
+    background-image: url("/static/images/chalks.jpg");
+    min-height: 50rem;
+    background-color: var(--orange);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

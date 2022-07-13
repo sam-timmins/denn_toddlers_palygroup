@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg navbar-light py-0 px-lg-3 fixed-top background-red border-bottom-orange">
+    <div class="container-fluid p-0 m-0">
+        <!-- Playgroup name and hamburger -->
+        <a class="navbar-brand text-md text-header text-white ms-3 letter-spacing-2" href="{% url 'home' %}"
+            aria-labelledby="playgroup-name">
+            {{ playgroup_name }}
+        </a>
+        <span id="playgroup-name" class="sr-only">
+            A link with green text and white background that navigates back to the homepage
+        </span>
+
+        <button class="navbar-toggler text-sm rounded-0 me-3 my-4 me-xl-5 rounded-3" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <!-- Menu links -->
+        <div class="collapse navbar-collapse text-sm border-bottom-blue" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ms-auto p-5 p-lg-0 background-red">
+
+                <li class="nav-item me-lg-3 me-xl-5 my-3 my-lg-0">
+                    <a class="nav-link text-sm text-black text-center letter-spacing-2 p-3 background-orange rounded-3" href="#"
+                        aria-labelledby="navbar-contact">
+                        Contact Us
+                    </a>
+                    <span id="navbar-contact" class="sr-only">
+                        A link with black text and a orange background that navigates to the contact page in the same
+                        tab
+                    </span>
+                </li>
+
+                <li class="nav-item me-lg-3 me-xl-5 my-3 my-lg-0">
+                    <a class="nav-link text-sm text-black text-center letter-spacing-2 p-3 background-green rounded-3" href="#"
+                        aria-labelledby="navbar-gallery">
+                        Gallery
+                    </a>
+                    <span id="navbar-gallery" class="sr-only">
+                        A link with white text and a red background that navigates to the gallery page in the same tab
+                    </span>
+                </li>
+
+                <li class="nav-item me-lg-3 me-xl-5 my-3 my-lg-0">
+                    <a class="nav-link text-sm text-white text-center letter-spacing-2 p-3 background-blue rounded-3" href="#"
+                        aria-labelledby="navbar-registration">
+                        Registration
+                    </a>
+                    <span id="navbar-registration" class="sr-only">
+                        A link with white text and a red background that navigates to the registration page in the same
+                        tab
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

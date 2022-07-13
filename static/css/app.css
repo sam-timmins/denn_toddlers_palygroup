@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Butterfly+Kids&family=Nunito&display=swap');
+
+/* 
+font-family: 'Butterfly Kids', cursive;
+font-family: 'Nunito', sans-serif;
+*/
+
+:root {
+    --blue: #111D5E;
+    --green: #C0E218;
+    --orange: #F77810;
+    --black-transp: rgba(0, 0, 0, 0.7);
+    --black: #000;
+    --red: #B30033;
+    --white: #FFFFFF;
+    --white-transp: rgba(255, 255, 255, 0.8);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Font sizes */
+
+.text-xs {
+    font-size: 1.5rem;
+}
+
+.text-sm {
+    font-size: 2rem;
+}
+
+.text-md {
+    font-size: 3rem;
+}
+
+.text-lg {
+    font-size: 4rem;
+}
+
+.text-xl {
+    font-size: 5rem;
+}
+
+/* Font colours */
+
+.text-white {
+    color: var(--white);
+}
+
+.text-blue {
+    color: var(--blue);
+}
+
+.text-red {
+    color: var(--red);
+}
+
+.text-green {
+    color: var(--green);
+}
+
+.text-orange {
+    color: var(--orange);
+}
+
+.text-black {
+    color: var(--black);
+}
+
+/* Font styles */
+
+.text-header {
+    font-family: 'Butterfly Kids', cursive;
+}
+
+.letter-spacing-2 {
+    letter-spacing: 2px;
+}
+
+/* Background colours */
+
+.background-white {
+    background-color: var(--white);
+}
+
+.background-white-transp {
+    background-color: var(--white-transp);
+}
+
+.background-black-transp {
+    background-color: var(--black-transp);
+}
+
+.background-blue {
+    background-color: var(--blue);
+}
+
+.background-red {
+    background-color: var(--red);
+}
+
+.background-green {
+    background-color: var(--green);
+}
+
+.background-orange {
+    background-color: var(--orange);
+}
+
+/* Borders */
+
+.border-bottom-orange {
+    border-bottom: 2px solid var(--orange);
+}
+
+.border-top-orange {
+    border-top: 2px solid var(--orange);
+}
+
+/* Buttons */
+
+.button {
+    border: 2px solid var(--white-transp);
+    background-color: var(--orange);
+    color: var(--black);
+    font-size: 2rem;
+}
+
+/* Navbar and Footer */
+
+.nav-spacer,
+.navbar {
+    height: 7.5rem;
+}
+
+.footer {
+    height: 9rem;
+}
+
+.navbar-light .navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem var(--white-transp)
+}
+
+.navbar-toggler {
+    background-color: var(--white);
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.button:hover,
+.button:focus {
+    background-color: var(--white);
+    color: var(--red) !important;
+    box-shadow: 0px 0px 15px 2px var(--white-transp);
+    transition: 0.8s;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+    color: var(--blue) !important;
+    transition: 0.8s;
+}
+
+/* SVG */
+
+.preschool-blob {
+    height: 30rem;
+}
+
+/* Toasts */
+
+.message-container {
+    position: fixed;
+    top: 8rem;
+    right: 0;
+    z-index: 10;
+}
+
+.toast-image {
+    height: 5rem;
+    max-width: 6rem;
+}

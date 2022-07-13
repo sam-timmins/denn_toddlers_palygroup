@@ -1,0 +1,5 @@
+.email-link:hover,
+.email-link:focus {
+    color: var(--green);
+    transition: 0.8s;
+}
