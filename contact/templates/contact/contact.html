@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block title %}
+    Contact
+{% endblock %}
+
+{% block header %}
+    <div class="container">
+        <div class="row my-5 mx-auto">
+            <div class="col-12">
+                <h2 class="text-header text-page-header text-white text-lg text-center m-0">
+                        Contact Us
+                </h2>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+
+            {% if name %}
+
+                {% include  'contact/components/svg-blob.html' %}
+                <p class="text-white text-sm text-center mb-5 p-5">
+                    Hi <span class="text-green">{{ name | title }}</span>, we have received your message and will respond as soon as possible.
+                </p>
+
+            {% else %}
+
+                <div class="col-12 p-5 d-flex flex-column align-items-center justify-content-center">
+                    <!-- Contact Form -->
+                    <div class="row">
+                        <div class="col-12">
+                            <form action="{% url 'contact' %}#contact-section" method="POST"
+                                class="container p-0 d-flex flex-column justify-content-center align-items-center mb-5">
+                                {% csrf_token %}
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <input type="text" name="message-name" placeholder="Your Name" {% if saved_name %}
+                                            value="{{ saved_name }}" {% endif %}
+                                            class="my-3 mt-md-5 p-2 form-control fw-light text-xs" maxlength="150" required
+                                            id="message-name">
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <input type="email" name="message-email" placeholder="Your Email" {% if saved_email %}
+                                            value="{{ saved_email }}" {% endif %}
+                                            class="my-3 mt-lg-5 p-2 form-control fw-light text-xs" maxlength="150" required
+                                            id="message-email">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <textarea name="message" placeholder="Your Message"
+                                            class="my-3 mt-lg-5 form-control fw-light p-3 text-xs" maxlength="150" required
+                                            id="message">{% if saved_message %}{{ saved_message }}{% endif %}</textarea>
+                                    </div>
+
+                                    <div class="col-12 text-center">
+                                        <button type="submit" class=" btn btn-md button p-3 my-5 mx-3 mx-md-5 rounded-pill">
+                                            Send Message
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </form>
+
+                            <p class="text-center text-white text-sm px-md-5 my-3">You can contact us by <a href="mailto:{{ playgroup_email }}"
+                                    class="text-orange text-decoration-none email-link">email</a> or simply fill
+                                out the form above. We will always get back to you as soon as we can.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
