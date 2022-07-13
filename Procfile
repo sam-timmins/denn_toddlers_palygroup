@@ -1,1 +1,1 @@
-web: gunicorn denn-toddlers.wsgi
+web: gunicorn denn_toddlers.wsgi
